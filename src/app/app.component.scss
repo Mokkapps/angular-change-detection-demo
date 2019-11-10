@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.link {
+  color: white;
+}
+
+.toolbar {
+  min-height: 60px;
+}

@@ -1,0 +1,59 @@
+<mat-card class="info">
+  <mat-card-header>
+    If a component is checked by ChangeDetector it is highlighted with a red border
+  </mat-card-header>
+</mat-card>
+<mat-divider class="my-3"></mat-divider>
+<h2>Global Actions</h2>
+<div class="d-flex align-items-center my-3">
+  <button mat-raised-button class="mr-3" (click)="triggerSetTimeout()">
+    Trigger setTimeout
+  </button>
+  <button mat-raised-button class="mr-3" (click)="triggerTick()">
+    Trigger ApplicationRef.tick()
+  </button>
+  <button mat-raised-button class="mr-3" (click)="triggerMarkForCheck()">
+    Trigger markForCheck()
+  </button>
+  <button mat-raised-button class="mr-3" (click)="triggerObservableTime()">
+    {{ timeSubscription ? 'Stop Observable Time' : 'Show Observable Time' }}
+  </button>
+  <p *ngIf="timeSubscription">{{ time | date: 'h:mm:ss' }}</p>
+</div>
+<mat-divider class="my-3"></mat-divider>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Modify Heroes
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <button mat-raised-button color="primary" class="my-3" (click)="addHero()">Add Hero</button>
+  <form *ngFor="let hero of heroes">
+    <mat-form-field class="mr-3">
+      <input
+        matInput
+        placeholder="Hero name"
+        name="name"
+        [(ngModel)]="hero.name"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="mr-3">
+      <input matInput placeholder="Hero ID" name="id" [(ngModel)]="hero.id" />
+    </mat-form-field>
+
+    <button mat-raised-button (click)="createNewHero(hero.id)">
+      Create new object reference
+    </button>
+  </form>
+</mat-expansion-panel>
+<mat-divider class="my-3"></mat-divider>
+<h3>ChangeDetectionStrategy.Default</h3>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card *ngFor="let hero of heroes" [hero]="hero"></app-hero-card>
+</div>
+<mat-divider class="my-3"></mat-divider>
+<h3>ChangeDetectionStrategy.OnPush</h3>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card-on-push *ngFor="let hero of heroes" [hero]="hero"></app-hero-card-on-push>
+</div>

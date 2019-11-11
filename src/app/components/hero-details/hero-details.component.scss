@@ -1,0 +1,7 @@
+.wrapper {
+  border: 1px solid black;
+}
+
+:host(.highlight .wrapper) {
+  border: 2px solid orangered;
+}

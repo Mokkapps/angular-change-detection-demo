@@ -1,0 +1,13 @@
+<h2>ExpressionChangedAfterItHasBeenCheckedError Demo</h2>
+<mat-card class="info my-3">
+  <mat-card-header>
+    <ul>
+      <li>Name is changed in ngAfterViewInit, open browser console to see the error</li>
+      <li>View generation process (which ngAfterViewInit is a part of) is itself further modifying the data that we are trying to display in the first place</li>
+    </ul>
+  </mat-card-header>
+</mat-card>
+<p class="mb-3">{{ hero | json }}</p>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card [hero]="hero"></app-hero-card>
+</div>

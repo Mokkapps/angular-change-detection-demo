@@ -2,6 +2,7 @@ import { ChangeDetectorRef, ElementRef, NgZone } from '@angular/core';
 import { getNewHeroAge, getNewHeroName } from './utils/utils';
 import { Hero } from './models/hero';
 import { HttpClient } from '@angular/common/http';
+import {environment} from '../environments/environment';
 
 export abstract class AbstractChangeDetectionComponent {
   hero: Hero;
@@ -23,9 +24,9 @@ export abstract class AbstractChangeDetectionComponent {
 
   loadNameViaHttp() {
     this.http
-      .get<{ name: string; surname: string }>('https://uinames.com/api/')
+      .get<{ name: string }>(`./assets/test-data/test-hero.json`)
       .subscribe(res => {
-        this.hero.name = `${res.name} ${res.surname}`;
+        this.hero.name = `${res.name}`;
       });
   }
 

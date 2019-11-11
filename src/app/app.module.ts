@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -12,7 +12,7 @@ import {
   MatExpansionModule,
   MatFormFieldModule,
   MatInputModule,
-  MatToolbarModule
+  MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import { SimpleDemoComponent } from './simple-demo/simple-demo.component';
 import { HomeComponent } from './home/home.component';
@@ -21,30 +21,9 @@ import { HeroDetailsComponent } from './components/hero-details/hero-details.com
 import { HttpClientModule } from '@angular/common/http';
 import { HeroCardOnPushComponent } from './components/hero-card-on-push/hero-card-on-push.component';
 import { ComplexDemoComponent } from './complex-demo/complex-demo.component';
-
-const APP_ROUTES: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'simple-demo',
-    component: SimpleDemoComponent
-  },
-  {
-    path: 'complex-demo',
-    component: ComplexDemoComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'home'
-  }
-];
+import { DetachDemoComponent } from './detach-demo/detach-demo.component';
+import { APP_ROUTES } from './app.routes';
+import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expression-changed-after-it-has-been-checked-error-demo/expression-changed-after-it-has-been-checked-error-demo.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +33,9 @@ const APP_ROUTES: Routes = [
     HeroCardComponent,
     HeroDetailsComponent,
     HeroCardOnPushComponent,
-    ComplexDemoComponent
+    ComplexDemoComponent,
+    DetachDemoComponent,
+    ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +49,8 @@ const APP_ROUTES: Routes = [
     MatDividerModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

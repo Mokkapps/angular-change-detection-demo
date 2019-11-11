@@ -1,0 +1,13 @@
+<h2>Deactivate And Manually Trigger Change Detection</h2>
+<mat-card class="info my-3">
+  <mat-card-header>
+    <ul>
+      <li>Click on "Detach" in card to deactivate change detection</li>
+      <li>Clicking on "Detect Changes" updates the view manually</li>
+    </ul>
+  </mat-card-header>
+</mat-card>
+<p class="mb-3">{{ hero | json }}</p>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card-on-push [hero]="hero"></app-hero-card-on-push>
+</div>

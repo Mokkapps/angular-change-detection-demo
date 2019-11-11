@@ -1,9 +1,22 @@
-<form>
-  <mat-form-field class="mr-2">
-    <input matInput placeholder="Age" name="age" [(ngModel)]="hero.details.age">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Country" name="country" [(ngModel)]="hero.details.country">
-  </mat-form-field>
-</form>
+{{blink()}}
+<div class="wrapper p-1">
+  <small>HeroDetailsComponent</small>
+  <form class="mt-2">
+    <mat-form-field class="mr-2">
+      <input
+        matInput
+        placeholder="Age"
+        name="age"
+        [(ngModel)]="hero.details.age"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Country"
+        name="country"
+        [(ngModel)]="hero.details.country"
+      />
+    </mat-form-field>
+  </form>
+</div>

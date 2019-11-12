@@ -1,0 +1,22 @@
+<h2>AsyncPipe & OnPush</h2>
+<mat-divider class="my-3"></mat-divider>
+<h2>OnPush With Async Pipe</h2>
+<mat-divider class="my-3"></mat-divider>
+<mat-card class="info my-3">
+  <mat-card-header>
+    Each emitted value marks the component for CD
+  </mat-card-header>
+</mat-card>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card-async-pipe [useAsyncPipe]="true"></app-hero-card-async-pipe>
+</div>
+<h2>OnPush Without Async Pipe</h2>
+<mat-divider class="my-3"></mat-divider>
+<mat-card class="info my-3">
+  <mat-card-header>
+    Observable interval inside the component does not trigger CD
+  </mat-card-header>
+</mat-card>
+<div class="d-flex flex-wrap mb-3">
+  <app-hero-card-async-pipe [useAsyncPipe]="false"></app-hero-card-async-pipe>
+</div>

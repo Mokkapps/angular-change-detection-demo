@@ -24,6 +24,8 @@ import { ComplexDemoComponent } from './complex-demo/complex-demo.component';
 import { DetachDemoComponent } from './detach-demo/detach-demo.component';
 import { APP_ROUTES } from './app.routes';
 import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expression-changed-after-it-has-been-checked-error-demo/expression-changed-after-it-has-been-checked-error-demo.component';
+import { AsyncPipeDemoComponent } from './async-pipe-demo/async-pipe-demo.component';
+import { HeroCardAsyncPipeComponent } from './components/hero-card-async-pipe/hero-card-async-pipe.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expr
     ComplexDemoComponent,
     DetachDemoComponent,
     ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent,
+    AsyncPipeDemoComponent,
+    HeroCardAsyncPipeComponent,
   ],
   imports: [
     BrowserModule,

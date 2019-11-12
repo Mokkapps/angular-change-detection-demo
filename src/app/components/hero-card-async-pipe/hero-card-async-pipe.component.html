@@ -1,0 +1,22 @@
+{{ blink() }}
+
+<mat-card>
+  <mat-card-header>
+    <small>HeroCardAsyncPipeOnPush</small>
+    <mat-card-title *ngIf="useAsyncPipe">{{
+      (hero$ | async).name
+    }}</mat-card-title>
+    <mat-card-subtitle *ngIf="useAsyncPipe">{{
+      (hero$ | async).id
+    }}</mat-card-subtitle>
+    <mat-card-title *ngIf="!useAsyncPipe">{{ hero.name }}</mat-card-title>
+    <mat-card-subtitle *ngIf="!useAsyncPipe">{{ hero.id }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <app-hero-details
+      *ngIf="useAsyncPipe"
+      [hero]="hero$ | async"
+    ></app-hero-details>
+    <app-hero-details *ngIf="!useAsyncPipe" [hero]="hero"></app-hero-details>
+  </mat-card-content>
+</mat-card>

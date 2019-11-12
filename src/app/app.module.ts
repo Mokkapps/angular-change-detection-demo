@@ -11,7 +11,7 @@ import {
   MatDividerModule,
   MatExpansionModule,
   MatFormFieldModule,
-  MatInputModule,
+  MatInputModule, MatListModule, MatSidenavModule,
   MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import { SimpleDemoComponent } from './simple-demo/simple-demo.component';
@@ -26,6 +26,7 @@ import { APP_ROUTES } from './app.routes';
 import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expression-changed-after-it-has-been-checked-error-demo/expression-changed-after-it-has-been-checked-error-demo.component';
 import { AsyncPipeDemoComponent } from './async-pipe-demo/async-pipe-demo.component';
 import { HeroCardAsyncPipeComponent } from './components/hero-card-async-pipe/hero-card-async-pipe.component';
+import { RunOutsideAngularDemoComponent } from './run-outside-angular-demo/run-outside-angular-demo.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HeroCardAsyncPipeComponent } from './components/hero-card-async-pipe/he
     ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent,
     AsyncPipeDemoComponent,
     HeroCardAsyncPipeComponent,
+    RunOutsideAngularDemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,9 @@ import { HeroCardAsyncPipeComponent } from './components/hero-card-async-pipe/he
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

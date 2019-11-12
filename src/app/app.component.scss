@@ -1,7 +1,18 @@
-:host {
+.sidenav-container {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: lightgray;
+  border-right: 1px solid black;
 }
 
 .fill-remaining-space {
@@ -12,7 +23,16 @@
   color: white;
 }
 
-.toolbar {
-  min-height: 60px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

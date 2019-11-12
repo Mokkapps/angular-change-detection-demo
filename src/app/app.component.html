@@ -1,18 +1,12 @@
-<mat-toolbar class="toolbar" color="primary">
+<mat-toolbar class="header" color="primary">
   <svg viewBox="0 0 128 128" width="30" heigth="30">
     <path
       fill="#FFFFFF"
       d="M52.864 64h23.28l-12.375-25.877zM63.81 1.026l-59.257 20.854 9.363 77.637 49.957 27.457 50.214-27.828 9.36-77.635-59.637-20.485zm-15.766 73.974l-7.265 18.176-13.581.056 36.608-81.079-.07-.153h-.064l.001-.133.063.133h.14100000000000001l.123-.274v.274h-.124l-.069.153 38.189 81.417-13.074-.287-8.042-18.58-17.173.082"
     ></path>
   </svg>
-  <a class="ml-2 mr-4 link" routerLink="/">Change Detection Guide</a>
-  <span class="fill-remaining-space">
-    <a class="mr-3 link" routerLink="/simple-demo">Simple Demo</a>
-    <a class="mr-3 link" routerLink="/detach-demo">Detach Demo</a>
-    <a class="mr-3 link" routerLink="/async-pipe-demo">AsyncPipe Demo</a>
-    <a class="mr-3 link" routerLink="/expression-changed-demo">Expression Changed Demo</a>
-    <a class="mr-3 link" routerLink="/complex-demo">Complex Demo</a>
-  </span>
+  <a class="ml-2 mr-4 link" routerLink="/">Change Detection Demos</a>
+  <span class="fill-remaining-space"></span>
   <span class="d-flex align-items-center ml-3">
     <svg viewBox="0 0 128 128" width="30" heigth="30">
       <path
@@ -25,13 +19,34 @@
         d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
       ></path>
     </svg>
-    <a class="ml-2 link" href="https://github.com/Mokkapps/angular-change-detection-demo">GitHub</a>
+    <a
+      class="ml-2 link"
+      href="https://github.com/Mokkapps/angular-change-detection-demo"
+      >GitHub</a
+    >
   </span>
 </mat-toolbar>
-<div class="flex-grow-1 p-3">
-  <router-outlet></router-outlet>
-</div>
-<mat-toolbar color="secondary" class="d-flex justify-content-center toolbar">
+<mat-sidenav-container class="sidenav-container d-flex">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item class="mt-3" routerLink="/simple-demo">Simple Demo</a>
+      <a mat-list-item class="mt-3" routerLink="/detach-demo">Detach Demo</a>
+      <a mat-list-item class="mt-3" routerLink="/async-pipe-demo">AsyncPipe Demo</a>
+      <a mat-list-item class="mt-3" routerLink="/run-outside-angular-demo"
+        >RunOutsideAngular Demo</a
+      >
+      <a mat-list-item class="mt-3" routerLink="/expression-changed-demo"
+        >Expression Changed Demo</a
+      >
+      <a mat-list-item class="mt-3" routerLink="/complex-demo">Complex Demo</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="p-3 w-100"
+    ><router-outlet></router-outlet
+  ></mat-sidenav-content>
+</mat-sidenav-container>
+<mat-toolbar color="secondary" class="d-flex justify-content-center footer">
   <span
     >Built with ♥ by <a href="https://www.mokkapps.de">Mokkapps</a> |
     <a href="https://github.com/Mokkapps/angular-change-detection-demo"

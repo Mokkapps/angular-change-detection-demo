@@ -11,8 +11,11 @@ import {
   MatDividerModule,
   MatExpansionModule,
   MatFormFieldModule,
-  MatInputModule, MatListModule, MatSidenavModule,
-  MatToolbarModule, MatTooltipModule
+  MatInputModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatTooltipModule
 } from '@angular/material';
 import { SimpleDemoComponent } from './simple-demo/simple-demo.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +29,7 @@ import { APP_ROUTES } from './app.routes';
 import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expression-changed-after-it-has-been-checked-error-demo/expression-changed-after-it-has-been-checked-error-demo.component';
 import { AsyncPipeDemoComponent } from './async-pipe-demo/async-pipe-demo.component';
 import { HeroCardAsyncPipeComponent } from './components/hero-card-async-pipe/hero-card-async-pipe.component';
-import { RunOutsideAngularDemoComponent } from './run-outside-angular-demo/run-outside-angular-demo.component';
+import { RunOutsideAngularTriggerComponent } from './components/run-outside-angular-trigger/run-outside-angular-trigger.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,7 @@ import { RunOutsideAngularDemoComponent } from './run-outside-angular-demo/run-o
     ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent,
     AsyncPipeDemoComponent,
     HeroCardAsyncPipeComponent,
-    RunOutsideAngularDemoComponent,
+    RunOutsideAngularTriggerComponent
   ],
   imports: [
     BrowserModule,

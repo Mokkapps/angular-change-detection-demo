@@ -5,7 +5,6 @@ import { ComplexDemoComponent } from './complex-demo/complex-demo.component';
 import { DetachDemoComponent } from './detach-demo/detach-demo.component';
 import { ExpressionChangedAfterItHasBeenCheckedErrorDemoComponent } from './expression-changed-after-it-has-been-checked-error-demo/expression-changed-after-it-has-been-checked-error-demo.component';
 import {AsyncPipeDemoComponent} from './async-pipe-demo/async-pipe-demo.component';
-import {RunOutsideAngularDemoComponent} from './run-outside-angular-demo/run-outside-angular-demo.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -32,10 +31,6 @@ export const APP_ROUTES: Routes = [
   {
     path: 'async-pipe-demo',
     component: AsyncPipeDemoComponent
-  },
-  {
-    path: 'run-outside-angular-demo',
-    component: RunOutsideAngularDemoComponent
   },
   {
     path: 'expression-changed-demo',

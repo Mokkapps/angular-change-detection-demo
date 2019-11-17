@@ -9,7 +9,7 @@ import {AsyncPipeDemoComponent} from './async-pipe-demo/async-pipe-demo.componen
 export const APP_ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {

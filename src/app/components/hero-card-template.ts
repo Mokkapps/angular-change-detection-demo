@@ -13,7 +13,7 @@ export function getHeroCardTemplate(
             <app-hero-details [hero]="hero"></app-hero-details>
           </mat-card-content>
           <mat-card-actions>
-             <div class="d-flex flex-wrap">   
+             <div class="d-flex flex-wrap">
               <button mat-raised-button color="primary" (click)="changeName()">
                 Change Name
               </button>

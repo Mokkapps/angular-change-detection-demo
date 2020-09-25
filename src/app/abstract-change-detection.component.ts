@@ -2,7 +2,6 @@ import { ChangeDetectorRef, ElementRef, NgZone } from '@angular/core';
 import { getNewHeroAge, getNewHeroName } from './utils/utils';
 import { Hero } from './models/hero';
 import { HttpClient } from '@angular/common/http';
-import {environment} from '../environments/environment';
 
 export abstract class AbstractChangeDetectionComponent {
   hero: Hero;

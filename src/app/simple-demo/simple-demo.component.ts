@@ -2,7 +2,6 @@ import {
   ApplicationRef,
   ChangeDetectorRef,
   Component,
-  NgZone,
   OnInit
 } from '@angular/core';
 import { Hero } from '../models/hero';

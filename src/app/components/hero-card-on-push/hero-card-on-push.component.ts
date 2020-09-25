@@ -13,7 +13,7 @@ import { getHeroCardTemplate } from '../hero-card-template';
 
 @Component({
   selector: 'app-hero-card-on-push',
-  templateUrl: getHeroCardTemplate('HeroCardOnPushComponent'),
+  template: getHeroCardTemplate('HeroCardOnPushComponent'),
   styleUrls: ['./hero-card-on-push.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

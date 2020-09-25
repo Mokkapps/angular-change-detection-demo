@@ -12,7 +12,7 @@ import { getHeroCardTemplate } from '../hero-card-template';
 
 @Component({
   selector: 'app-hero-card',
-  templateUrl: getHeroCardTemplate(),
+  template: getHeroCardTemplate(),
   styleUrls: ['./hero-card.component.scss']
 })
 export class HeroCardComponent extends AbstractChangeDetectionComponent {

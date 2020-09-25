@@ -5,18 +5,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatCardModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatListModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatTooltipModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { SimpleDemoComponent } from './simple-demo/simple-demo.component';
 import { HomeComponent } from './home/home.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';

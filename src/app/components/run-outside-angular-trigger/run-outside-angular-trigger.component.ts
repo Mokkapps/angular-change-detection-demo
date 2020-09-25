@@ -8,7 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
-import { MatButton } from '@angular/material';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-run-outside-angular-trigger',
